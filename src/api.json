@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "title":"apple",
+        "price": 500,
+        "images": "./styles/images/apple.png"
+    },
+    {
+        "id":2,
+        "title":"banana",
+        "price": 200,
+        "images": "./styles/images/banana.png"
+    },
+    {
+        "id":3,
+        "title":"orange",
+        "price": 100,
+        "images": "./styles/images/orange.png"
+    },
+    {
+        "id":4,
+        "title":"watermelon",
+        "price": 350,
+        "images": "./styles/images/watermelon.png"
+    }
+]

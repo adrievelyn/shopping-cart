@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    position: relative;
+    padding-bottom: 10em;
+    min-height: 100vh;
+}
+.virtual-store{
+    display: flex;
+    justify-content: space-around;
+    background-color:rgb(16, 74, 107);
+
+    &__title{
+        margin-top: 30px;
+        color: white;
+        
+    }
+    
+}
+.virtual-store1{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(38, 119, 92);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &__title1{
+        margin-top: 20px;
+        color: white;
+        
+    }
+    &__img1{
+        margin-top: 5px;
+    }
+    
+}
+
+.container{
+    text-align: center;
+}
+
+.card{
+    
+
+    &__img{
+        width: 150px;
+        height: 150px;
+    }
+}
