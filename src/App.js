@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/App.scss';
-//import CartShopping from './Components/CartShopping';
+//import ShoppingCart from './Components/ShoppingCart';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import PaintProducts from './Components/PaintProducts';

@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react'
 import Api from '../api.json'
 //import apple from '../styles/images/apple.png'
 
-const CartShopping = (props) => {
+const ShoppingCart = (props) => {
     return(
         <div className='container'>
-        <div id='products-template' className='card'>
+        <div id='products-card' className='card'>
             <img src={props.img} className='card__img'/>
             <div className='card__body'>
                 <h2 className='card__title'>{props.title}</h2>
                 <p className='card__price'>{props.price}</p>
-                <button className='card__btn'>Add to Cart</button>
+                <button className='card__btn' id='card__btn'>Add to Cart</button>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@ const CartShopping = (props) => {
 }
 
 
-export default CartShopping;
+export default ShoppingCart;
 
 
 //LLAMADA DESDE API JSON

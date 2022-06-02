@@ -1,8 +1,55 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Roboto:wght@100&display=swap');
+
+:root{
+	/*Fuentes*/
+	$Font_1: 'DM Sans', sans-serif;
+	$Font_2: 'Inter', sans-serif;
+	/*Estilos */
+	--font-sans:'DM Sans', sans-serif;
+	--font-inter:'Inter', sans-serif;
+	--size-300:300;
+	--size-400:400;
+	--size-500:500;
+	--size-700:700;
+	/*Colores */
+	--background:#E5E5E5;
+	--linear-gradient:207.8deg, #201E1C 16.69%, #F7931A 100%;
+	--dark-orange:#F7931A;
+	--soft-orange:#FFE9D5;
+	--secondary-blue:#1A9AF7; 
+	--soft-blue:#E7F5FF;
+	--warm-black:#201E1C;
+	--warm-blackplus1:#282623;
+	--grey:#BABABA;
+	--off-white:#FAF8F7;
+	--just-white:#FFFFFF;
+    /*border radius*/
+	--radius: 0.2rem;
+}
+
+/**,
+*::before,
+*::after{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}*/
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    margin: 1rem;
     position: relative;
     padding-bottom: 10em;
     min-height: 100vh;
+    flex-grow: 1;
+}
+.paint-products{
+    display: grid;
+    margin: 2rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
 }
 .virtual-store{
     display: flex;
@@ -12,6 +59,7 @@ body{
     &__title{
         margin-top: 30px;
         color: white;
+        font-size: 25px;
         
     }
     
@@ -27,6 +75,7 @@ body{
     &__title1{
         margin-top: 20px;
         color: white;
+        font-size: 15px;
         
     }
     &__img1{
@@ -40,10 +89,70 @@ body{
 }
 
 .card{
-    
+    box-shadow: 0 0 10px 5px var(--grey);
+    border-radius: var(--radius);
+    min-width:15rem;
+    display: flex;
 
     &__img{
-        width: 150px;
-        height: 150px;
+        width: 8rem;
+        height: 5rem;
+        object-fit: cover;
+        margin: auto;
+    }
+    &__title{
+        line-height: 1.4rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    &__price{
+        font-size: 1.4rem;
+        margin-top: 0.6rem;
+        margin-right: 1.5rem;
+
+        &::before{
+            content: "$";
+            font-size: 1rem;
+            position: relative;
+            top: -0.3rem;
+            padding-right: 0.1rem;
+
+        }
+    }
+        &__btn{
+            border: 1px solid var(--grey);
+            background-color: var(--just-white);
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--grey);
+            width: 100%;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: var(--radius);
+            text-align: center;
+
+           
+   }
+        &__btn:hover{
+            background-color: var(--secondary-blue);
+        }
+}
+
+@media screen and (min-width:500px){
+    .paint-products{
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+    }
+
+    .card{
+        flex-direction: column;
+        text-align: center;
+        min-width: 14rem;
+
+        &__img{
+            width: 100px;
+            height: 100px;
+        }
     }
 }
