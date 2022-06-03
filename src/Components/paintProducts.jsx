@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import ShoppingCart from './ShoppingCart';
-//import ProductsInCart from './ProductsInCart';
+import { ShoppingCart, Product} from './ShoppingCart';
+import ProductsInCart from './ProductsInCart';
 import Apple from '../styles/images/apple.png'
 import Banana from '../styles/images/banana.png'
 import Orange from '../styles/images/orange.png'
@@ -31,11 +31,10 @@ const PaintProducts = () => {
                     price='350'
                 />
             </div>
-             
+            <Product />             
         </div>
     )
-}
-
+};
 
 export default PaintProducts;
 

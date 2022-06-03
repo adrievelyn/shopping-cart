@@ -84,11 +84,11 @@ body{
     
 }
 
-.container{
+.container, .card1{
     text-align: center;
 }
 
-.card{
+.card, .card__body1{
     box-shadow: 0 0 10px 5px var(--grey);
     border-radius: var(--radius);
     min-width:15rem;
@@ -138,6 +138,11 @@ body{
         &__btn:hover{
             background-color: var(--secondary-blue);
         }
+}
+
+.card__body1{
+    justify-content: space-around;
+    font-size: 20px;
 }
 
 @media screen and (min-width:500px){
