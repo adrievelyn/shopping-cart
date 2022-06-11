@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import BtnAddRedEmpty from './BtnAddRedEmpty';
 import { TYPES } from './BtnAddRedEmpty';
-
+import Apple from '../styles/images/apple.png';
 
 export const shoppingInitial = {
   
@@ -11,26 +11,26 @@ export const shoppingInitial = {
         id:1,
         title:"apple",
         price: 500,
-        image: "./styles/images/apple.png"
+        image: <img src={Apple}></img>
     },
     {
         id:2,
         title:"banana",
         price: 200,
-        image: "./styles/images/banana.png"
+        image: "../styles/images/banana.png"
     },
     {
         id:3,
         title:"orange",
         price: 100,
-        image: "./styles/images/orange.png"
+        image: "../styles/images/orange.png"
     },
     {
         id:4,
-        title:"watermelon",
+        title:"melon",
         price: 350,
-        image: "./styles/images/watermelon.png"
-    },
+        image: "../styles/images/watermelon.png"
+    }
 ],
         cart:[],
 
@@ -38,8 +38,14 @@ export const shoppingInitial = {
 
 export function ProductsInCart(state,action) {
     switch (action.type){
-        case TYPES.AddToCart:{
+        case TYPES.Add_To_Cart:{
+            let newItem = state.products.find((product) => product.id === action.payload);
+            console.log(newItem)
 
+            return{
+                ...state,
+                cart:[...state.cart, newItem],
+            };
         }
         case TYPES.Remove_One_From_Cart:{
 
