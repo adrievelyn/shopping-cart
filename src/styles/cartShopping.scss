@@ -44,6 +44,15 @@ body{
     min-height: 100vh;
     flex-grow: 1;
 }
+.container{
+    text-align: center;
+
+    &__store{
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
+    }
+}
 .wrapper{
     display: grid;
     margin: 2rem;
@@ -52,6 +61,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
     justify-content: center;
 }
+
 .virtual-store{
     display: flex;
     justify-content: space-around;
@@ -94,7 +104,7 @@ body{
     box-shadow: 0 0 10px 5px var(--grey);
     border-radius: var(--radius);
     //display: flex;
-    margin-top: 20px;
+    //margin-top: 0px;
     //justify-content: space-between;
     transition: transform 200ms ease in;
 
@@ -172,12 +182,19 @@ body{
         cursor: pointer;
         border-radius: var(--radius);
         text-align: center;
+        
     }
 
 .card__body1{
     justify-content: space-around;
     font-size: 15px;
    
+}
+.wrapper1{
+     &__cart{
+         width: 100px;
+         height: 100px;
+     }
 }
 
 @media screen and (min-width:600px){
@@ -212,7 +229,7 @@ body{
      .card{
         //display: flex;
         //flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
 
         /*&__img{
             width: 100;

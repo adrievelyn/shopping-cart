@@ -3,8 +3,10 @@ import React, { useReducer } from 'react'
 import BtnAddRedEmpty from './BtnAddRedEmpty';
 import { shoppingInitial, ProductsInCart } from './ProductsInCart';
 import ProductItem from './ProductItem';
-import CartItem from './CartItem';
+import { CartItem, CartItem2, CartItem3 } from './CartItem';
 import { TYPES } from './BtnAddRedEmpty';
+import Store from '../styles/images/online-store.png'
+import Cart from '../styles/images/carrito-compras.png'
 
 
 //import PaintProducts from "./PaintProducts";
@@ -30,6 +32,7 @@ import { TYPES } from './BtnAddRedEmpty';
         };
         return(
             <div className='container'>
+                <img className='container__store' src={Store} alt="store" />
                 <div className='wrapper'>
                     <article>
                         { products.map((product) => (
@@ -38,34 +41,50 @@ import { TYPES } from './BtnAddRedEmpty';
                 </div>
 
                     
-            <div className='wrapper1'>
-                <div className='card1'>
-                    <article>
-                        <p key={emptyCart} className='card__product1'>Product</p>
-                        {
-                            cart.map(( item, index ) => (
-                            < CartItem key={index} data={item} delFromCart={delFromCart} />
-                        ))}  
-                    </article>
-                    <div>
-                        <p className='card__amount1'>Amount</p>
-                    </div>
-                    <div>
-                        <p className='card__action1'>Action</p>
-                    </div>
-                    <div>
-                        <p className='card__total1'>Total</p>
-                    </div>
-                </div>
-                </div>
+                <div className='wrapper1'>
+                <img className='wrapper1__cart' src={Cart} alt="cart" />
+                    <div className='card1'>
                         <article>
-                            <button onClick={emptyCart} className='card__btn1'>Empty Cart</button>
+                            <p key={emptyCart} className='card__product1'>Product</p>
+                            {
+                                cart.map(( item, index ) => (
+                                < CartItem key={index} data={item} delFromCart={delFromCart} />
+                            ))}  
                         </article>
-               
-                    <div>
-                        <p>Empty Cart - Start Shopping</p>
+
+                        <article>
+                            <p className='card__price1'>Price</p>
+                            {
+                                cart.map(( item, index ) => (
+                                < CartItem2 key={index} data={item} delFromCart={delFromCart} />
+                            ))}  
+                           
+                        </article>
+                        <article>
+                            <p className='card__amount1'>Amount</p>
+                            {
+                                cart.map(( item, index ) => (
+                                < CartItem3 key={index} data={item} delFromCart={delFromCart} />
+                            ))}  
+                        </article>
+                      
+                        <div>
+                            <p className='card__action1'>Action</p>
+                        </div>
+                        <div>
+                            <p className='card__total1'>Total</p>
+                        </div>
                     </div>
                 </div>
+                <div className='buttonEmpty'>
+                <article>
+                    <button onClick={emptyCart} className='card__btn'>Empty Cart</button>
+                </article>
+                </div>
+                <div>
+                    <p>Empty Cart - Start Shopping</p>
+                </div>
+        </div>
           
             
 
