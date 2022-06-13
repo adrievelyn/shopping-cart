@@ -70,7 +70,7 @@ body{
     &__title{
         margin-top: 30px;
         color: white;
-        font-size: 20px;
+        font-size: 15px;
         
     }
     
@@ -168,6 +168,12 @@ body{
 .card1{
     display: flex;
     justify-content: space-around;
+    font-size: 12px;
+    padding: 10px;
+
+    &__product1, &__price1, &__amount1, &__action1, &__total1{
+        padding-bottom: 10px;
+    }
 }
 .card__btn1{
         border: 2px solid var(--grey);
@@ -197,6 +203,7 @@ body{
      }
 }
 
+
 @media screen and (min-width:600px){
     .wrapper{
        grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
@@ -217,6 +224,10 @@ body{
             height: 100px;
         }
     }
+
+    .card1{
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width:850px){
@@ -226,6 +237,17 @@ body{
         //grid-template-columns: 1fr 1fr 1fr 1fr;
         
      }
+     .virtual-store, .virtual-store1{
+        
+        &__title, &__title1{
+            font-size: 25px;
+        }
+        &__img1{
+            width: 70px;
+            height: 70px;
+        }
+     }
+
      .card{
         //display: flex;
         //flex-direction: row;
@@ -235,6 +257,15 @@ body{
             width: 100;
             height: 12rem;
         }*/
+        &__title, &__price{
+            font-size: 20px;
+        }
+        &__btn{
+            font-size: 15px;
+        }
      }
+     .card1{
+        font-size: 20px;
+    }
 
 }

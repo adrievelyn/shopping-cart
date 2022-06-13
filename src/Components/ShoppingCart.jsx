@@ -3,7 +3,7 @@ import React, { useReducer } from 'react'
 import BtnAddRedEmpty from './BtnAddRedEmpty';
 import { shoppingInitial, ProductsInCart } from './ProductsInCart';
 import ProductItem from './ProductItem';
-import { CartItem, CartItem2, CartItem3 } from './CartItem';
+import { CartItem, CartItem2, CartItem3, CartItem5 } from './CartItem';
 import { TYPES } from './BtnAddRedEmpty';
 import Store from '../styles/images/online-store.png'
 import Cart from '../styles/images/carrito-compras.png'
@@ -76,6 +76,10 @@ import Cart from '../styles/images/carrito-compras.png'
                         </article>
                         <div>
                             <p className='card__total1'>Total</p>
+                            {
+                                cart.map(( item, index ) => (
+                                < CartItem5 key={index} data={item} delFromCart={delFromCart} />
+                            ))} 
                         </div>
                     </div>
                 </div>

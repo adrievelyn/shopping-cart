@@ -2,7 +2,7 @@ import React from 'react'
 import { ProductsInCart } from './ProductsInCart'
 
 const ProductItem = ({ data, addToCart }) => {
-    let {image, id, title, price} = data;
+    let {image, id, title, price, amount} = data;
 
   return (
         <div className='card'>
