@@ -65,12 +65,15 @@ import Cart from '../styles/images/carrito-compras.png'
                             {
                                 cart.map(( item, index ) => (
                                 < CartItem3 key={index} data={item} delFromCart={delFromCart} />
-                            ))}  
+                            ))} 
                         </article>
                       
-                        <div>
-                            <p className='card__action1'>Action</p>
-                        </div>
+                        <article>
+                            
+                            <p  className='card__action1'>Action</p>
+                            
+                         
+                        </article>
                         <div>
                             <p className='card__total1'>Total</p>
                         </div>

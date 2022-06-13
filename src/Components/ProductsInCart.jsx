@@ -40,13 +40,33 @@ export function ProductsInCart(state,action) {
     switch (action.type){
         case TYPES.Add_To_Cart:{
             let newItem = state.products.find((product) => product.id === action.payload);
-            console.log(newItem)
+            //console.log(newItem)
 
+            let itemInCart = state.cart.find(item => item.id === newItem.id)
+            return itemInCart 
+            ?{
+                ...state,
+                cart: state.cart.map((item )=> 
+                item.id===newItem.id ? 
+                { ...item, amount: item.amount + 1 }
+                : item
+                ),
+             } 
+            :{
+                ...state,
+                cart:[ ...state.cart, {...newItem, amount: 1 }],
+             };
+            } 
+
+
+            
+            /*
+            LO QUE RETORNABAMOS ANTES DEL ITEMCART 
             return{
                 ...state,
                 cart:[...state.cart, newItem],
-            };
-        }
+            };*/
+        
         case TYPES.Remove_One_From_Cart:{
 
         }

@@ -14,13 +14,21 @@ export const CartItem = ({data, delFromCart}) => {
 export const CartItem2 = ({data, delFromCart}) => {
     let{id, price } = data //destructuramos de data
     return(
-    <div className='item__title'>
+    <div className='item__price'>
         <h4>{price}</h4>
     </div>
     )
 }
 
-export const CartItem3 = ({data, delFromCart}) => {
-
+//let cart={}
+export const CartItem3 = ({ data, delFromCart }) => {
+    let{id, amount } = data //destructuramos de data
+    return(
+    <div className='item__amount'>
+        <h4>{amount}</h4>
+    </div>
+    )
+    
+    
     
 }
