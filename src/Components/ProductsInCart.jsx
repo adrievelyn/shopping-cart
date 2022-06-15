@@ -68,13 +68,14 @@ export function ProductsInCart(state,action) {
             };*/
         
         case TYPES.Remove_One_From_Cart:{
-
+            
         }
         case TYPES.Remove_All_From_Cart:{
 
         }
         case TYPES.Clear_Cart:{
-            return shoppingInitial;
+            return shoppingInitial
+        
         }
         default:
             return state;

@@ -170,12 +170,13 @@ body{
     justify-content: space-around;
     font-size: 12px;
     padding: 10px;
+    justify-content: space-between;
 
-    &__product1, &__price1, &__amount1, &__action1, &__total1{
-        padding-bottom: 10px;
+    &__product1{
+        margin-top: 100px;
     }
-}
-.card__btn1{
+
+    &__btn1{
         border: 2px solid var(--grey);
         background: transparent;
         font-family: inherit;
@@ -188,19 +189,39 @@ body{
         cursor: pointer;
         border-radius: var(--radius);
         text-align: center;
-        
     }
 
-.card__body1{
-    justify-content: space-around;
-    font-size: 15px;
-   
+    &____body1{
+        justify-content: space-around;
+        font-size: 15px;
+    }
 }
+
+
 .wrapper1{
      &__cart{
          width: 100px;
          height: 100px;
      }
+}
+
+.item-title {
+    margin-top: 10px;
+}
+
+.btn-sumrest{
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+}
+.btn__sum, .btn__rest{
+    cursor: pointer;
+    color: var(--grey);
+    width: 15px;
+}
+.btn__sum:hover, .btn__rest:hover{
+    background-color: var(--secondary-blue);
+    color: yellow;
 }
 
 

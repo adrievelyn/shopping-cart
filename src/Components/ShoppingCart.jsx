@@ -3,7 +3,7 @@ import React, { useReducer } from 'react'
 import BtnAddRedEmpty from './BtnAddRedEmpty';
 import { shoppingInitial, ProductsInCart } from './ProductsInCart';
 import ProductItem from './ProductItem';
-import { CartItem, CartItem2, CartItem3, CartItem5 } from './CartItem';
+import { CartItem, CartItem2, CartItem3, CartItem4, CartItem5 } from './CartItem';
 import { TYPES } from './BtnAddRedEmpty';
 import Store from '../styles/images/online-store.png'
 import Cart from '../styles/images/carrito-compras.png'
@@ -44,59 +44,57 @@ import Cart from '../styles/images/carrito-compras.png'
                 <div className='wrapper1'>
                 <img className='wrapper1__cart' src={Cart} alt="cart" />
                     <div className='card1'>
-                        <article>
-                            <p key={emptyCart} className='card__product1'>Product</p>
+                        <article className='card__product1'>
+                            <p key={emptyCart}>Product</p>
                             {
                                 cart.map(( item, index ) => (
                                 < CartItem key={index} data={item} delFromCart={delFromCart} />
                             ))}  
                         </article>
 
-                        <article>
-                            <p className='card__price1'>Price</p>
+                        <article className='card__price1'>
+                            <p>Price</p>
                             {
                                 cart.map(( item, index ) => (
                                 < CartItem2 key={index} data={item} delFromCart={delFromCart} />
                             ))}  
                            
                         </article>
-                        <article>
-                            <p className='card__amount1'>Amount</p>
+                        <article className='card__amount1'>
+                            <p>Amount</p>
                             {
                                 cart.map(( item, index ) => (
                                 < CartItem3 key={index} data={item} delFromCart={delFromCart} />
                             ))} 
                         </article>
                       
-                        <article>
-                            
-                            <p  className='card__action1'>Action</p>
-                            
-  
-    
-                         
+                        <article className='card__action1'>
+                            <p>Action</p>
+                            {
+                                cart.map(( item, index ) => (
+                                < CartItem4 key={index} data={item} delFromCart={delFromCart} />
+                            ))} 
                         </article>
-                        <div>
-                            <p className='card__total1'>Total</p>
+                        <article className='card__total1'>
+                            <p>Total</p>
                             {
                                 cart.map(( item, index ) => (
                                 < CartItem5 key={index} data={item} delFromCart={delFromCart} />
                             ))} 
-                        </div>
+                        </article>
                     </div>
                 </div>
                 <div className='buttonEmpty'>
                 <article>
                     <button onClick={emptyCart} className='card__btn'>Empty Cart</button>
+                       
                 </article>
                 </div>
-                <div>
-                    <p>Empty Cart - Start Shopping</p>
-                </div>
+              
         </div>
           
             
-
+          
 
                 
             
@@ -173,6 +171,13 @@ TARJETA DEL CARRITO DE HMTL Y JS
                 })
             }
         </div>
-        </div>*/
+        </div>
+        
+        
+
+          <div className='start-shopping'>
+                    <p>Empty Cart - Start Shopping</p>
+                </div>
+        */
 
  
