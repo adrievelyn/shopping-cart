@@ -32,6 +32,12 @@ export const CartItem3 = ({ data, delFromCart }) => {
     
     
 }
+export const CartItem4 = ({ data, delFromCart }) => {
+    
+    
+    
+    
+}
 
 export const CartItem5 = ({ data, delFromCart }) => {
     let{id, total, price, amount } = data //destructuramos de data

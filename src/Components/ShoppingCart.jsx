@@ -72,6 +72,8 @@ import Cart from '../styles/images/carrito-compras.png'
                             
                             <p  className='card__action1'>Action</p>
                             
+  
+    
                          
                         </article>
                         <div>
@@ -173,4 +175,4 @@ TARJETA DEL CARRITO DE HMTL Y JS
         </div>
         </div>*/
 
-        
+ 

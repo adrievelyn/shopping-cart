@@ -74,7 +74,7 @@ export function ProductsInCart(state,action) {
 
         }
         case TYPES.Clear_Cart:{
-
+            return shoppingInitial;
         }
         default:
             return state;
