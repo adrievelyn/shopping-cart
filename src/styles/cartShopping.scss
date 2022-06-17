@@ -269,10 +269,8 @@ body{
 
 @media screen and (min-width:850px){
     .wrapper{
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 22rem));
-        //display: flex;
-        //grid-template-columns: 1fr 1fr 1fr 1fr;
-        
+        //grid-template-columns: repeat(auto-fit, minmax(20rem, 22rem));
+        display: flex;
      }
      .virtual-store, .virtual-store1{
         
