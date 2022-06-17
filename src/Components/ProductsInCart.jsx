@@ -67,11 +67,23 @@ export function ProductsInCart(state,action) {
                 cart:[...state.cart, newItem],
             };*/
         
-        case TYPES.Remove_One_From_Cart:{
+        case TYPES.Add_Sum_One_From_Cart:{
             
         }
-        case TYPES.Remove_All_From_Cart:{
-
+        case TYPES.Remove_Rest_One_From_Cart:{
+            let itemToDelete = state.cart.find((item) => item.id === action.payload);
+            return itemToDelete.amount > 1 
+            ?{
+            ...state, 
+            cart: state.cart.map((item) => item.id === action.payload 
+            ? { ...item, amount:item.amount - 1}
+                :item
+                ),
+            }
+            :{
+                ...state,
+                cart:state.cart.filter((item) => item.id !== action.payload),
+            };
         }
         case TYPES.Clear_Cart:{
             return shoppingInitial

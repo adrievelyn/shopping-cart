@@ -168,13 +168,22 @@ body{
 .card1{
     display: flex;
     justify-content: space-around;
-    font-size: 12px;
+    font-size: 15px;
     padding: 10px;
     justify-content: space-between;
 
     &__product1{
         margin-top: 100px;
     }
+
+    .item-price span, .item__total span{
+            content: "$";
+            font-size: 0.7rem;
+            position: relative;
+            top: -0.3rem;
+            padding-right: 0.1rem;
+        }
+    
 
     &__btn1{
         border: 2px solid var(--grey);
@@ -247,7 +256,14 @@ body{
     }
 
     .card1{
-        font-size: 15px;
+        font-size: 18px;
+    }
+    .item-price span, .item__total span{
+        content: "$";
+        font-size: 0.5rem;
+        position: relative;
+        top: -0.3rem;
+        padding-right: 0.1rem;
     }
 }
 
@@ -286,7 +302,14 @@ body{
         }
      }
      .card1{
-        font-size: 20px;
+        font-size: 23px;
+    }
+    .item-price span, .item__total span{
+        content: "$";
+        font-size:1rem;
+        position: relative;
+        top: -0.3rem;
+        padding-right: 0.1rem;
     }
 
 }

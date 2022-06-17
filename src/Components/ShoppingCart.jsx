@@ -24,8 +24,13 @@ import Cart from '../styles/images/carrito-compras.png'
             dispatch({type: TYPES.Add_To_Cart, payload:id})
         }
 
-        const delFromCart = () => {
-    
+        const delFromCart = (id, sum = true) => {
+            console.log(id, sum)
+            if(sum){
+                dispatch({type: TYPES.Add_Sum_One_From_Cart, payload:id})
+            }else{
+                dispatch({type: TYPES.Remove_Rest_One_From_Cart, payload:id})
+            }
         }
         const emptyCart = () => {
             dispatch({ type:TYPES.Clear_Cart});
