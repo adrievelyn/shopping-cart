@@ -5,7 +5,7 @@ import App from './App';
 //import PaintProducts from './Components/PaintProducts';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('App'));
 root.render(
   <React.StrictMode>
     <App />
